@@ -1,0 +1,90 @@
+[
+    {
+        "name": "croquetas de lentejas y avena",
+        "meat_base": false
+    },
+    {
+        "name": "Champiñones salteados con ajo y perejil",
+        "meat_base": false
+    },
+    {
+        "name": "champiñones asados",
+        "meat_base": false
+    },
+    {
+        "name": "ensalada de arvejas y habichuelas",
+        "meat_base": false
+    },
+    {
+        "name": "cuajada con tomate cherry y hierbas",
+        "meat_base": false
+    },
+    {
+        "name": "huevo duro picado",
+        "meat_base": false
+    },
+    {
+        "name": "garbanzos crujientes",
+        "meat_base": false
+    },
+    {
+        "name": "falafel de garbanzos",
+        "meat_base": false
+    },
+    {
+        "name": "salteado de verduras",
+        "meat_base": false
+    },
+    {
+        "name": "croquetas de coliflor",
+        "meat_base": false
+    },
+    {
+        "name": "guacamole con tomate y repollo",
+        "meat_base": false
+    },
+    {
+        "name": "habichuelas al ajillo",
+        "meat_base": false
+    },
+    {
+        "name": "frijoles",
+        "meat_base": false
+    },
+    {
+        "name": "pierna de cerdo a la plancha",
+        "meat_base": true
+    },
+    {
+        "name": "cañon de cerdo a la plancha",
+        "meat_base": true
+    },
+    {
+        "name": "filete de pollo a la plancha",
+        "meat_base": true
+    },
+    {
+        "name": "costilla de cerdo",
+        "meat_base": true
+    },
+    {
+        "name": "pollo desmechado",
+        "meat_base": true
+    },
+    {
+        "name": "carne desmechada",
+        "meat_base": true
+    },
+    {
+        "name": "carne molida",
+        "meat_base": true
+    },
+    {
+        "name": "posta de res sudada",
+        "meat_base": true
+    },
+    {
+        "name": "higado encebollado",
+        "meat_base": true
+    }
+]

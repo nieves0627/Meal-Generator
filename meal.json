@@ -1,0 +1,42 @@
+[
+    {
+    "name":"sudado de pollo",
+    "protein":["pollo"],
+    "carb":["papa", "mazorca"],
+    "salad":null,
+    "extra":null,
+    "soup":null
+    },
+    {
+    "name":"arroz con pollo",
+    "protein":["pollo"],
+    "carb":["arroz"],
+    "salad":null,
+    "extra":null,
+    "soup":null
+    },
+    {
+    "name":"pastas con pollo y champiñones,",
+    "protein":["pollo", "champiñones"],
+    "carb":["pastas"],
+    "salad":null,
+    "extra":null,
+    "soup":null
+    },
+    {
+    "name":"sancocho de res,",
+    "protein":["res"],
+    "carb":["papa", "mazorca", "yuca", "platano", "arroz"],
+    "salad":null,
+    "extra":null,
+    "soup":null
+    },
+    {
+    "name": "Caldo de costilla",
+    "protein":["res"],
+    "carb":["papa"],
+    "salad":null,
+    "extra":null,
+    "soup":null
+    }
+]
