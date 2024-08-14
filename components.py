@@ -19,7 +19,7 @@ This module is designed to be flexible and extensible, allowing for easy
 addition of new meal components and customization of meal generation logic.
 """
 
-
+import os
 import json
 from abc import ABC
 import random
@@ -32,6 +32,7 @@ class MealItems(ABC):
     Attributes:
         name (str): The name of the meal item.
     """
+
     def __init__(self, name: str):
         """
         Initialize a MealItems instance.
@@ -46,6 +47,7 @@ class Salad(MealItems):
     """
     Represents a salad component of a meal.
     """
+
     def __init__(self, name: str):
         """
         Initialize a Salad instance.
@@ -60,6 +62,7 @@ class Carb(MealItems):
     """
     Represents a carbohydrate component of a meal.
     """
+
     def __init__(self, name: str):
         """
         Initialize a Carb instance.
@@ -74,6 +77,7 @@ class Soup(MealItems):
     """
     Represents a soup component of a meal.
     """
+
     def __init__(self, name: str):
         """
         Initialize a Soup instance.
@@ -88,6 +92,7 @@ class Extra(MealItems):
     """
     Represents an extra component of a meal.
     """
+
     def __init__(self, name: str):
         super().__init__(name)
 
@@ -126,6 +131,7 @@ class Repository(ABC):
         protein_data (list): List to store protein data.
         meal_data (list): List to store meal data.
     """
+
     salad_data = []
     carb_data = []
     soup_data = []
@@ -186,11 +192,8 @@ class MenuItemRepository(Repository):
     """
     Repository for managing menu items.
     """
-    def __init__(
-        self, salad_path,
-        carb_path, soup_path,
-        extra_path, protein_path, meal_path
-    ):
+
+    def __init__(self, folder_path):
         """
         Initialize a MenuItemRepository instance.
 
@@ -202,12 +205,22 @@ class MenuItemRepository(Repository):
             protein_path (str): Path to the protein data file.
             meal_path (str): Path to the meal data file.
         """
-        self.load_salad(salad_path)
-        self.load_carb(carb_path)
-        self.load_soup(soup_path)
-        self.load_extra(extra_path)
-        self.load_protein(protein_path)
-        self.load_meal(meal_path)
+
+        folder_path = ""
+        self.folder_path = os.path.dirname(os.path.realpath(folder_path))
+
+        self.load_salad(
+            file_path=os.path.join(folder_path, "folder_path\\salad.json"))
+        self.load_carb(
+            file_path=os.path.join(folder_path, "folder_path\\carb.json"))
+        self.load_soup(
+            file_path=os.path.join(folder_path, "folder_path\\soup.json"))
+        self.load_extra(
+            file_path=os.path.join(folder_path, "folder_path\\extra.json"))
+        self.load_protein(
+            file_path=os.path.join(folder_path, "folder_path\\protein.json"))
+        self.load_meal(
+            file_path=os.path.join(folder_path, "folder_path\\meal.json"))
 
     def load_salad(self, file_path):
         """
@@ -358,6 +371,7 @@ class ProteinFilter:
     """
     A utility class for filtering protein items.
     """
+
     @staticmethod
     def filter_protein(with_meat: bool,
                        protein_list: list[Protein]) -> list[Protein]:
@@ -425,6 +439,7 @@ class MealGenerator:
     """
     A class for generating meals based on specified criteria.
     """
+
     def __init__(self, repository: Repository):
         """
         Initialize a MealGenerator instance.
@@ -463,7 +478,8 @@ class MealGenerator:
 
         protein_list = self.repository.get_protein_data()
         protein_list_filtered = ProteinFilter.filter_protein(
-            with_meat, protein_list)
+            with_meat,
+            protein_list)
         meal_arguments["protein"] = random.choice(protein_list_filtered)
 
         meal = Meal("meal1", **meal_arguments)

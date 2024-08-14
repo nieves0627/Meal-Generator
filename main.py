@@ -1,18 +1,11 @@
 # import random
 from components import MenuItemRepository, MealGenerator
 
-
-repository = MenuItemRepository(
-    "first_week\\final_project_1\\salad.json",
-    "first_week\\final_project_1\\carb.json",
-    "first_week\\final_project_1\\soup.json",
-    "first_week\\final_project_1\\extra.json",
-    "first_week\\final_project_1\\protein.json",
-    "first_week\\final_project_1\\meal.json",
-)
+folder_path = "C:\\Users\\Juli\\Desktop\\Juliana\\Programacion\\practice\\first_week\\final_project_1\\folder_path"
+repository = MenuItemRepository(folder_path)
 
 meal_generator = MealGenerator(repository)
-meal = meal_generator.generate_meal(False, True, True)
+meal = meal_generator.generate_meal(with_extra=True, with_soup=False, with_meat=True)
 print("finishhh")
 
 
