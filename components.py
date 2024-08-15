@@ -434,6 +434,15 @@ class Meal:
         self.extra = extra
         self.soup = soup
 
+    def to_string(self):
+        salad = f"y ensalada de: {self.salad}"
+        response = f"{self.protein.name} con {self.carb}"
+        if self.extra is not None:
+            response += f" extra de {self.extra}"
+        if self.soup is not None:
+            response += " " + self.soup
+        return response + salad
+
 
 class MealGenerator:
     """
