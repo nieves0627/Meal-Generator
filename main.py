@@ -6,6 +6,7 @@ repository = MenuItemRepository(folder_path)
 
 meal_generator = MealGenerator(repository)
 meal = meal_generator.generate_meal(with_extra=True, with_soup=False, with_meat=True)
+message = meal.to_string()
 print("finishhh")
 
 
