@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "Meal-generator"
+version = "0.1.0"
+description = "A simple Python project that generates customized meals based on various components such as proteins, carbohydrates, salads, soups, and extra items."
+authors = ["Juliana Gutierrez <alejuli.0627@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = {extras = ["standard"], version = "^0.113.0"}
+pydantic = "^2.9.0"
+uvicorn = "^0.30.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
