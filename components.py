@@ -435,12 +435,12 @@ class Meal:
         self.soup = soup
 
     def to_string(self):
-        salad = f"y ensalada de: {self.salad}"
-        response = f"{self.protein.name} con {self.carb}"
+        salad = f"y ensalada de {str(self.salad.name)}"
+        response = f"{str(self.protein.name)} con {str(self.carb.name)} "
         if self.extra is not None:
-            response += f" extra de {self.extra}"
+            response += "," + " " + f"extra de {str(self.extra.name)} "
         if self.soup is not None:
-            response += " " + self.soup
+            response += "," + " " + str(self.soup.name) + " "
         return response + salad
 
 
