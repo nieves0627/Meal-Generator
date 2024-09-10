@@ -1,12 +1,13 @@
 # import random
 from components import MenuItemRepository, MealGenerator
 
-folder_path = "C:\\Users\\Juli\\Desktop\\Juliana\\Programacion\\practice\\first_week\\final_project_1\\folder_path"
+folder_path = "C:\\Users\\Juli\\Desktop\\Juliana\\Programacion\\study_plan_practice\\first_week\\final_project_1\\folder_path"
 repository = MenuItemRepository(folder_path)
 
 meal_generator = MealGenerator(repository)
-meal = meal_generator.generate_meal(with_extra=True, with_soup=False, with_meat=True)
+meal = meal_generator.generate_meal(with_extra=True, with_soup=True, with_meat=True)
 message = meal.to_string()
+print(message)
 print("finishhh")
 
 
