@@ -386,11 +386,11 @@ class ProteinFilter:
         Returns:
             list[Protein]: A filtered list of proteins.
         """
-        list_protin = []
+        list_protein = []
         for protein in protein_list:
             if protein.meat == with_meat:
-                list_protin.append(protein)
-        return list_protin
+                list_protein.append(protein)
+        return list_protein
 
 
 class Meal:
@@ -435,12 +435,12 @@ class Meal:
         self.soup = soup
 
     def to_string(self):
-        salad = f"y ensalada de {str(self.salad.name)}"
-        response = f"{str(self.protein.name)} con {str(self.carb.name)} "
+        salad = f"y ensalada de {self.salad.name}"
+        response = f"{self.protein.name} con {self.carb.name} "
         if self.extra is not None:
-            response += "," + " " + f"extra de {str(self.extra.name)} "
+            response += "," + " " + f"extra de {self.extra.name} "
         if self.soup is not None:
-            response += "," + " " + str(self.soup.name) + " "
+            response += "," + " " + (self.soup.name) + " "
         return response + salad
 
 
